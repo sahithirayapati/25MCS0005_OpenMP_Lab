@@ -8,7 +8,7 @@
 //#include"ret_et_helloworld.h"
 #include "mnudrvprg_030_for_worksharing_construct.h"
 //#include "mnudrvprg_010_parallel_construct.h"
-
+//#include "metrics_collection.h"
 
 
 int main() {
@@ -39,6 +39,7 @@ int main() {
     //fn_mnudrvprg_030_for_worksharing_construct();
     //fn_mnudrvprg_010_parallel_construct();
     fn_mnudrvprg_030_for_worksharing_construct();
+    //metrics_collection();
     
         return 0;
 }
