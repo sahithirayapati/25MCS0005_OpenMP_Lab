@@ -6,12 +6,13 @@
 int fn_mnudrvprg_030_for_worksharing_construct() {
 
 	int choice;
-	do {
+	while(1){
 		printf("\n//-------- Loop Worksharing Menu --------//\n");
 		printf("1.Worksharing with Two Construct\n");
 		printf("2.Worksharing with One Construct\n");
 		printf("3.Worksharing for Number Square with Serial Execution\n");
 		printf("4.Worksharing for Number Square with Parallel Execution\n");
+		
 		printf("0.Exit....\n");
 
 		printf("Enter your Choice\n");
@@ -22,13 +23,17 @@ int fn_mnudrvprg_030_for_worksharing_construct() {
 		case 1: fn_wsc_for_2constructs();
 			break;
 
-		case 2: fn_wsc_for_1constructs();
+		case 2: fn_wsc_for_1construct();
 			break;
 
 		case 3: fn_num_square_srl();
 			break;
 
-		case 4: fn_num_square_prl();
+		case 4:
+		{
+			fn_num_square_prl();
+			fn_num_square_speedup_efficiency();
+		}
 			break;
 
 		case 0: return 0;
@@ -36,9 +41,9 @@ int fn_mnudrvprg_030_for_worksharing_construct() {
 		default: printf("Invalid Choice.........\n");
 			break;
 
-		}//end of switch
+		}
 
-	} while (choice != 0);
+	} 
 
 	return 0;
 
